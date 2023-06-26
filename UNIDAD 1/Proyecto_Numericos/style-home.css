@@ -13,6 +13,7 @@
 
 .titulo-centralizado{
     text-align: center;
+    
 }
 
 p{
@@ -25,11 +26,6 @@ em strong{
 
 #mision{
     font-size: 20px;
-}
-
-.diferenciales{
-    background: #FFFFFF;
-    padding: 30px;
 }
 
 .items{

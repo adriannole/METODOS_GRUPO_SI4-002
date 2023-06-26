@@ -3,16 +3,19 @@ body{
 }
 img {
 
-    height: 250px;
+    height: 200px;
     
-    width: 250px;
+    width: 200px;
     
     object-fit: cover;
+    box-sizing: border-box;
+    border: 2px solid #000000;
+    border-radius: 10px;
     
     }
 header {
-    background-color:  orange;
-    padding: 20px 0;
+    background-color:  rgb(173, 172, 169);
+
 }
 
 .caja{
@@ -210,7 +213,8 @@ td,th{
 
 .diferenciales{
     padding: 3em 0;
-    background: #888888;
+    background: #ca1515;
+    
 }
 
 .contenido-diferenciales{
@@ -251,3 +255,40 @@ td,th{
     margin: 1em auto;
 }
 
+.ejercicios h2{
+    text-align: center;
+    font-weight: 100;
+    font-style: italic;
+}
+
+#buton{
+
+    display: inline-block;
+    text-align: center;
+    width: 30%;
+    vertical-align: top;
+    margin: 0 1.5%;
+    padding: 30px 20px;
+    box-sizing: border-box;
+    border: 2px solid #000000;
+    border-radius: 10px;
+    
+}
+#ejecutarBtn{
+    display: inline-block;
+    text-align: center;
+    width: 30%;
+    vertical-align: top;
+    margin: 0 1.5%;
+    padding: 30px 20px;
+    box-sizing: border-box;
+    border: 2px solid #000000;
+    border-radius: 10px;
+}
+
+#resultado{
+    display: inline-block;
+    padding: 1.2px;
+    background-color: #c78c19;
+
+}
