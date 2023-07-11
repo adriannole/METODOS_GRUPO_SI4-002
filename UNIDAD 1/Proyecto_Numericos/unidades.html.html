@@ -6,6 +6,8 @@
         <title>Métodos Numericos</title>
         <link rel="stylesheet" href="reset.css">
         <link rel="stylesheet" href="style.css">
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
         
         
     </head>
@@ -15,59 +17,180 @@
                 <h1><img src="imagenes/logo_load.png"></h1>
                 <nav>
                     <ul>
-                        <li><a href="Principal.html">Home</a></li>
-                        <li><a href="Unidades.html">Unidades</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="unidades.html.html">Unidades</a></li>
                     </ul>
                 </nav>
             </div>
         </header>
 
-        <main>
-             <div> 
-            <h1 class="Unidades">UNIDAD 1 </h1>
-            <ul class="Ejercicios">
-                <li>
-                    <h2>Tipo de Errores</h2>
-                    <img src="imagenes/errores.jpg">
+        
+            <main>
+                <script>
+                    function toggleSubmenu(index) {
+                        var submenus = document.getElementsByClassName('Ejercicios');
+                        var selectedSubmenu = submenus[index];
+                        
+                        for (var i = 0; i < submenus.length; i++) {
+                            if (i === index) {
+                                submenus[i].classList.toggle('visible');
+                            } else {
+                                submenus[i].classList.remove('visible');
+                            }
+                        }
+                    }
                     
-                </li>
-                <li>
-                    <h2>Sistema de numeracion</h2>
-                    <img src="imagenes/sistema_de_numeracion.jpg">
-             
-                </li>
-                <li>
-                    <h2>Punto Flotante</h2>
-                    <img src="imagenes/Punto Flotante.png">
-                  
-                </li>
-              <h1 class="Unidades">UNIDAD 2</h1>
-              
-                  <li>
-                      <h2>Teorema de Bolzano</h2>
-                      <img src="imagenes/Teorema-de-Bolzano.png">
+                    function toggleContenido(index) {
+                        var contenidos = document.getElementsByClassName('Contenido');
+                        var selectedContenido = contenidos[index];
+                        
+                        for (var i = 0; i < contenidos.length; i++) {
+                            if (i === index) {
+                                contenidos[i].classList.toggle('visible');
+                            } else {
+                                contenidos[i].classList.remove('visible');
+                            }
+                        }
+                    }
+                </script>
+            
+            <div>
+                <h1 class="Unidades" onclick="toggleSubmenu(0)">UNIDAD 1</h1>
+                <ul class="Ejercicios">
+                    <li>
+                        <a href="#" onclick="toggleContenido(0)">- Tipo de Errores</a>
+                        <div class="Contenido">
+                            <img src="imagenes/errores.jpg">
+                            <form id="erroresForm" onsubmit="calcularErrores(event)">
+                                <label for="valorReal">Valor Real:</label>
+                                <input type="number" id="valorReal" required><br>
+                                <label for="valorAproximado">Valor Aproximado:</label>
+                                <input type="number" id="valorAproximado" required><br>
+                                <button type="submit">Calcular</button>
+                              </form>
+                              <div id="erroresResultado"></div>
+                              <script src="errores.js"></script>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#" onclick="toggleContenido(1)">- Sistema de Numeración</a>
+                        <div class="Contenido">
+                            <img src="imagenes/sistema_de_numeracion.jpg">
+                            <form>
+                                <label for="opcion">Seleccione una opción:</label>
+                                <select id="opcion">
+                                  <option value="binarioDecimal">Binario a Decimal</option>
+                                  <option value="decimalBinario">Decimal a Binario</option>
+                                  <option value="octalDecimal">Octal a Decimal</option>
+                                  <option value="decimalHexadecimal">Decimal a Hexadecimal</option>
+                                  <option value="hexadecimalDecimal">Hexadecimal a Decimal</option>
+                                </select>
+                                <br>
+                                <label for="valor">Ingrese el valor:</label>
+                                <input type="text" id="valor">
+                                <br>
+                                <button type="button" onclick="convertir()">Realizar Conversión</button>
+                              </form>
+                              <div id="conversionResultado"></div>
+                              <script src="sistemasN.js"></script>
+                              
+                        </div>
+                    </li>
+                    <li>
+                        <ahref="#" onclick="toggleContenido(2)"> - Punto Flotante</a>
+                        <div class="Contenido">
+                            <img src="imagenes/Punto Flotante.png">
+                                <label for="seleccion">Seleccione un ejercicio:</label>
+                                <select id="seleccion">
+                                <option value="ejercicio9">Ejercicio 9</option>
+                                <option value="ejercicio10">Ejercicio 10</option>
+                                </select>
+                                <br>
+                                <button type="button" onclick="ejecutarEjercicio()">Ejecutar</button>
+                                <div id="resultado"></div>
+                            <script src="puntoflotante.js"></script>
+                            
+                        </div>
+                    </li>
+                </ul>
+                
+                <h1 class="Unidades" onclick="toggleSubmenu(1)">UNIDAD 2</h1>
+                <ul class="Ejercicios">
+                    <li>
+                        <a href="#" onclick="toggleContenido(3)">- Teorema de Bolzano</a>
+                        <div class="Contenido">
+                            <img src="imagenes/Teorema-de-Bolzano.png">
+                            <script src="Bolzano.js"></script>
+                      <form id="distanceForm">
+                        <label for="a">Extremo izquierdo del intervalo:</label>
+                        <input type="number" id="a" required>
+                        <br>
+                        <label for="b">Extremo derecho del intervalo:</label>
+                        <input type="number" id="b" required>
+                        <br>
+                        <label for="epsilon">Tolerancia:</label>
+                        <input type="number" id="epsilon" required>
+                        <br>
+                        <input type="submit" value="Calcular" onclick="ejecutarProgramaBolzano()">
+                      </form>
+                      
+                      <div id="Bolzanoresultado"></div>
+                      <canvas id="Bolzanografico"></canvas>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#" onclick="toggleContenido(4)">- Método de Bisección</a>
+                        <div class="Contenido">
+                            <img src="imagenes/Metodo de Biseccion.jpg">
+                           
+                         
+                            <script src="metodoBiseccion.js"></script>
+                            <form id="bisectionForm">
+                                <label for="ecuacion">Ecuación en función de x:</label>
+                                <input type="text" id="ecuacion" required>
+                                <br>
+                                <label for="limiteInferior">Límite inferior del intervalo:</label>
+                                <input type="number" id="limiteInferior" required>
+                                <br>
+                                <label for="limiteSuperior">Límite superior del intervalo:</label>
+                                <input type="number" id="limiteSuperior" required>
+                                <br>
+                                <input type="button" value="Calcular" onclick="ejecutarPrograma()">
+                            </form>
+                        
+                            <div id="Biseccionresultado"></div>
+                            <canvas id="Bisecciongrafico"></canvas>
+                        </div>
+                    </li>
+                </ul>
 
-                      <script src="Bolzano.js"></script>
-                      <button id="buton" onclick="ejecutarProgramaBolzano()">Teorema-de-Bolzano</button>
-                     <div id="resultado"></div>
-                      
-                  </li>
-                  <li>
-                      <h2>Metodo de Bisección</h2>
-                      <img src="imagenes/Metodo de Biseccion.jpg">
-                      <button id="ejecutarBtn">Metodo Biseccion</button>
-                      <script src="metodoBiseccion.js"></script>
-                      <div id="resultado"></div>
-
-                      
-                      
-               
-                  </li>
-                   
-              </ul>
-                </div>
+                <h1 class="Unidades" onclick="toggleSubmenu(2)">UNIDAD 3</h1>
+                <ul class="Ejercicios">
+                    <li>
+                        <a href="#" onclick="toggleContenido(5)">- Espacio Metrico</a>
+                        <div class="Contenido">
+                            <img src="imagenes/espaciosmetricos.jpg">
+                            <form id="distanceForm">
+                                <label for="x1">Coordenada x del primer punto:</label>
+                                <input type="number" id="x1" name="x1" required>
+                                <br>
+                                <label for="y1">Coordenada y del primer punto:</label>
+                                <input type="number" id="y1" name="y1" required>
+                                <br>
+                                <label for="x2">Coordenada x del segundo punto:</label>
+                                <input type="number" id="x2" name="x2" required>
+                                <br>
+                                <label for="y2">Coordenada y del segundo punto:</label>
+                                <input type="number" id="y2" name="y2" required>
+                                <br>
+                                <input type="submit" value="Calcular distancia">
+                            </form>
+                        
+                            <div id="result"></div>
+                            <script src="metricos.js"></script>
+                        </div>
+            </div>
         </main>
-
         <footer>
             <img src="imagenes/logo_load.png">
             
