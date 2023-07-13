@@ -1,6 +1,4 @@
-document.getElementById("distanceForm").addEventListener("submit", function(event) {
-    event.preventDefault();
-
+function calcularDistancia() {
     const x1 = parseFloat(document.getElementById("x1").value);
     const y1 = parseFloat(document.getElementById("y1").value);
     const x2 = parseFloat(document.getElementById("x2").value);
@@ -8,5 +6,5 @@ document.getElementById("distanceForm").addEventListener("submit", function(even
 
     const distance = Math.sqrt(Math.pow((x2 - x1), 2) + Math.pow((y2 - y1), 2));
 
-    document.getElementById("result").textContent = "La distancia entre los dos puntos es: " + distance;
-});
+    document.getElementById("Metricosresult").textContent = "La distancia entre los dos puntos es: " + distance;
+  }

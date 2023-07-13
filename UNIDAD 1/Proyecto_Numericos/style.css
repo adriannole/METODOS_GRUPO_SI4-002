@@ -55,7 +55,7 @@ nav a:hover{
     font-size: large;
     color: orange;
 }
-
+ 
 .Ejercicios {
     display: none;
     list-style-type: none;
@@ -63,21 +63,13 @@ nav a:hover{
     margin: 0;
 }
 
-.Temas {
-    display: none;
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
+ 
 
 .Ejercicios.visible {
     display: block;
 }
 
-.Temas.visible {
-    display: block;
-}
-
+ 
 .Ejercicios li a {
     display: block;
     text-decoration: none;
@@ -88,16 +80,7 @@ nav a:hover{
     color: #f00;
 }
 
-.Temas li a {
-    display: block;
-    text-decoration: none;
-    color: #333;
-    margin-left: 20px;
-}
-
-.Temas li a:hover {
-    color: #f00;
-}
+ 
 
 .Contenido {
     display: none;
@@ -161,6 +144,12 @@ nav a:hover{
     margin-top: 10px;
     font-weight: bold;
 }
+#Flotanteresultado{
+    background-color: #f0f0f0;
+    padding: 10px;
+    margin-top: 10px;
+    font-weight: bold;
+}
 #Bolzanoresultado {
     background-color: #f0f0f0;
     padding: 10px;
@@ -168,6 +157,12 @@ nav a:hover{
     font-weight: bold;
   }
   #Biseccionresultado{
+    background-color: #f0f0f0;
+    padding: 10px;
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  #Metricosresult{
     background-color: #f0f0f0;
     padding: 10px;
     margin-top: 10px;

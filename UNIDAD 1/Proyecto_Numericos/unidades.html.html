@@ -57,7 +57,7 @@
                 <h1 class="Unidades" onclick="toggleSubmenu(0)">UNIDAD 1</h1>
                 <ul class="Ejercicios">
                     <li>
-                        <a href="#" onclick="toggleContenido(0)">- Tipo de Errores</a>
+                        <a class="temas" href="#" onclick="toggleContenido(0)">- Tipo de Errores</a>
                         <div class="Contenido">
                             <img src="imagenes/errores.jpg">
                             <form id="erroresForm" onsubmit="calcularErrores(event)">
@@ -72,7 +72,7 @@
                         </div>
                     </li>
                     <li>
-                        <a href="#" onclick="toggleContenido(1)">- Sistema de Numeración</a>
+                        <a class="temas" href="#" onclick="toggleContenido(1)">- Sistema de Numeración</a>
                         <div class="Contenido">
                             <img src="imagenes/sistema_de_numeracion.jpg">
                             <form>
@@ -96,18 +96,33 @@
                         </div>
                     </li>
                     <li>
-                        <ahref="#" onclick="toggleContenido(2)"> - Punto Flotante</a>
+                        <a class="temas" href="#" onclick="toggleContenido(2)"> - Punto Flotante</a>
                         <div class="Contenido">
                             <img src="imagenes/Punto Flotante.png">
-                                <label for="seleccion">Seleccione un ejercicio:</label>
-                                <select id="seleccion">
-                                <option value="ejercicio9">Ejercicio 9</option>
-                                <option value="ejercicio10">Ejercicio 10</option>
+                            <script src="puntoflotante.js"></script>
+                            <form id="formulario" onsubmit="ejecutarEjercicio(event)">
+                                <label for="seleccion">Selecciona un ejercicio:</label>
+                                <select id="seleccion" onchange="toggleInputs()" required>
+                                  <option value="">Seleccionar ejercicio</option>
+                                  <option value="ejercicio9">Ejercicio 9 - Decimal a IEEE 754</option>
+                                  <option value="ejercicio10">Ejercicio 10 - Hexadecimal a Decimal</option>
                                 </select>
                                 <br>
-                                <button type="button" onclick="ejecutarEjercicio()">Ejecutar</button>
-                                <div id="resultado"></div>
-                            <script src="puntoflotante.js"></script>
+                                <div id="inputs-ejercicio9" style="display: none;">
+                                  <label for="valor1">Ingrese el valor:</label>
+                                  <input type="number" id="valor1" step="any" required>
+                                  <br>
+                                </div>
+                                <div id="inputs-ejercicio10" style="display: none;">
+                                  <label for="hexadecimal">Ingrese el valor hexadecimal:</label>
+                                  <input type="text" id="hexadecimal" required>
+                                  <br>
+                                </div>
+                                <button type="submit">Ejecutar</button>
+                              </form>
+                              <div id="Flotanteresultado"></div>
+                            
+                              <script src="puntoflotante.js"></script>
                             
                         </div>
                     </li>
@@ -116,7 +131,7 @@
                 <h1 class="Unidades" onclick="toggleSubmenu(1)">UNIDAD 2</h1>
                 <ul class="Ejercicios">
                     <li>
-                        <a href="#" onclick="toggleContenido(3)">- Teorema de Bolzano</a>
+                        <a class="temas" href="#" onclick="toggleContenido(3)">- Teorema de Bolzano</a>
                         <div class="Contenido">
                             <img src="imagenes/Teorema-de-Bolzano.png">
                             <script src="Bolzano.js"></script>
@@ -138,7 +153,7 @@
                         </div>
                     </li>
                     <li>
-                        <a href="#" onclick="toggleContenido(4)">- Método de Bisección</a>
+                        <a class="temas" href="#" onclick="toggleContenido(4)">- Método de Bisección</a>
                         <div class="Contenido">
                             <img src="imagenes/Metodo de Biseccion.jpg">
                            
@@ -166,9 +181,9 @@
                 <h1 class="Unidades" onclick="toggleSubmenu(2)">UNIDAD 3</h1>
                 <ul class="Ejercicios">
                     <li>
-                        <a href="#" onclick="toggleContenido(5)">- Espacio Metrico</a>
+                        <a class="temas" href="#" onclick="toggleContenido(5)">- Espacio Metrico</a>
                         <div class="Contenido">
-                            <img src="imagenes/espaciosmetricos.jpg">
+                            <img src="imagenes/metrico.png">
                             <form id="distanceForm">
                                 <label for="x1">Coordenada x del primer punto:</label>
                                 <input type="number" id="x1" name="x1" required>
@@ -182,11 +197,12 @@
                                 <label for="y2">Coordenada y del segundo punto:</label>
                                 <input type="number" id="y2" name="y2" required>
                                 <br>
-                                <input type="submit" value="Calcular distancia">
-                            </form>
-                        
-                            <div id="result"></div>
-                            <script src="metricos.js"></script>
+                                <button type="button" onclick="calcularDistancia()">Calcular distancia</button>
+                              </form>
+                            
+                              <div id="Metricosresult"></div>
+                            
+                              <script src="metricos.js"></script>
                         </div>
             </div>
         </main>
