@@ -1,6 +1,7 @@
 # METODOS_GRUPO_SI4-002
 REPOSITORIO DE TRABAJOS GRUPALES METODOS NUMERICOS PARALELO2   INTEGRANTES: LUIS NOLE, BRYAN CHILENO, ROMMEL PACHACAMA, JONATHAN VILLAREAL, JAIR FOLLECO, DARWIN YAZUMA
-===========================
+
+#
 Programa de Metodos Numericos desarrollado como Página Web.
 ===========================
 En este proyecto que se realizó estan implementados los siguientes metodos numericios que se encuentran divididas por unidades de acuerdo a como se fue estudiando durante el transcurso del semestre:
