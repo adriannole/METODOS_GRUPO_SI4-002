@@ -4,6 +4,9 @@ REPOSITORIO DE TRABAJOS GRUPALES METODOS NUMERICOS PARALELO2   INTEGRANTES: LUIS
 #
 Programa de Metodos Numericos desarrollado como Página Web.
 ===========================
+
+![Home Página Web](https://github.com/adriannole/METODOS_GRUPO_SI4-002/assets/134985208/eab13ff6-6fbe-49ae-b974-c7ef74bdc968)
+
 En este proyecto que se realizó estan implementados los siguientes metodos numericios que se encuentran divididas por unidades de acuerdo a como se fue estudiando durante el transcurso del semestre:
 UNIDAD 1
 - Tipos de Errores
