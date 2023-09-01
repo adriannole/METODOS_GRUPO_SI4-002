@@ -109,7 +109,7 @@
 <div id="unidad1-section">
   <div class="container">
     <div class="section-title">
-      <h2>Unidad 1</h2>
+       <h2><li>Unidad 1</li></h2>
       <hr>
     </div>
       <div class="space"></div>
@@ -281,7 +281,7 @@
 
        
           
-        <h1 class="Unidades" onclick="toggleSubmenu(0)">Espacio Métrico </h1>
+        <h1 class="Unidades" onclick="toggleSubmenu(0)"><i class="fa fa-futbol-o"></i>Espacio Métrico </h1>
         <div class="Contenido">
           <img src="img/metrico.png">
           <form id="distanceForm">
@@ -307,6 +307,103 @@
      
      
           </div>
+          <h1 class="Unidades" onclick="toggleSubmenu(1)"><i class="fa fa-futbol-o"></i>Serie de Taylor </h1>
+          <div class="Contenido">
+            <img src="img/diferencia-entre-las-series-taylor.jpg">
+            <form id="distanceForm">
+              <form id="calculator-form">
+                <label for="x">Valor de x:</label>
+                <input type="text" id="x" name="x" />
+                
+                <label for="n">Número de términos (n):</label>
+                <input type="text" id="n" name="n" />
+                
+                <button type="submit">Calcular</button>
+            </form>
+            
+            <div id="result"></div>
+            
+              <script src="Series_Taylor.js"></script>
+       
+       
+       
+            </div>
+
+            <h1 class="Unidades" onclick="toggleSubmenu(2)"><i class="fa fa-futbol-o"></i>Método de Trapecio </h1>
+            <div class="Contenido">
+              <img src="img/trapecio.png">
+              <form id="distanceForm">
+                <form id="integral-form">
+                  <label for="funcion">Ingrese la función (utilice 'x' como variable):</label>
+                  <input type="text" id="funcion" required><br>
+                  
+                  <label for="limite-inferior">Ingrese el límite inferior:</label>
+                  <input type="number" step="any" id="limite-inferior" required><br>
+                  
+                  <label for="limite-superior">Ingrese el límite superior:</label>
+                  <input type="number" step="any" id="limite-superior" required><br>
+                  
+                  <label for="num-trapecios">Ingrese el número de trapecios (n):</label>
+                  <input type="number" id="num-trapecios" required><br>
+                  
+                  <button type="submit">Calcular</button>
+              </form>
+              
+              <p id="resultado"></p>
+              
+              
+                <script src="MetodoTrapecio.js"></script>
+         
+         
+         
+              </div>
+               
+              <h1 class="Unidades" onclick="toggleSubmenu(3)"><i class="fa fa-futbol-o"></i>Regla de Simpson -primera forma</h1>
+              <div class="Contenido">
+                <img src="img/Simpson-01.jpg">
+                <form id="simpson-form">
+                  <label for="lowerLimit">Ingrese el límite inferior:</label>
+                  <input type="number" step="any" id="lowerLimit" required><br>
+                  
+                  <label for="upperLimit">Ingrese el límite superior:</label>
+                  <input type="number" step="any" id="upperLimit" required><br>
+                  
+                  <label for="intervalLength">Ingrese la longitud del intervalo (debe ser un número entero):</label>
+                  <input type="number" id="intervalLength" required><br>
+                  
+                  <button type="button" onclick="calculateSimpson()">Calcular</button>
+              </form>
+              
+              <p id="result"></p>
+              
+           
+           
+                </div>
+                <h1 class="Unidades" onclick="toggleSubmenu(3)"><i class="fa fa-futbol-o"></i>Regla de Simpson -segunda forma</h1>
+                <div class="Contenido">
+                   
+                  <form id="simpson-form">
+                    <label for="lowerLimit">Ingrese el límite inferior:</label>
+                    <input type="number" step="any" id="lowerLimit" required><br>
+                    
+                    <label for="upperLimit">Ingrese el límite superior:</label>
+                    <input type="number" step="any" id="upperLimit" required><br>
+                    
+                    <label for="intervalLength">Ingrese la longitud del intervalo (debe ser un número entero):</label>
+                    <input type="number" id="intervalLength" required><br>
+                    
+                    <button type="button" onclick="calculateSimpson()">Calcular</button>
+                </form>
+                
+                <p id="result"></p>
+                
+             
+             
+                  </div>
+     
+          </div>
+
+
 
 
 
@@ -331,7 +428,7 @@
     </div>
     <div id="row">
       <div class="col-md-2 col-sm-2 team">
-        <div class="thumbnail"> <img src="img/prettyPhoto/light_square/loader.gif" alt="..." class="team-img">
+        <div class="thumbnail"> <img src="img/jair.jpg" alt="..." class="team-img">
           <div class="caption">
             <h3>Jair Folleco</h3>
             <p>Project Manager</p>
@@ -358,7 +455,7 @@
         </div>
       </div>
       <div class="col-md-2 col-sm-2 team">
-        <div class="thumbnail"> <img src="img/prettyPhoto/light_square/loader.gif" alt="..." class="team-img">
+        <div class="thumbnail"> <img src="img/jonathan.jpg" alt="..." class="team-img">
           <div class="caption">
             <h3>Jhonathan Villareal</h3>
             <p>Developer</p>
